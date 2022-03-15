@@ -8,7 +8,7 @@ export default function CounterApp() {
 		counter3: 30,
 		counter4: 40,
 	});
-	const {counter1, counter2} = counters;
+	const { counter1, counter2 } = counters;
 
 	return (
 		<>
@@ -20,12 +20,12 @@ export default function CounterApp() {
 				onClick={() => {
 					setCounter({
 						...counters,
-						counter1: counter1 + 1
+						counter1: counter1 + 1,
 					});
 				}}
 			>
 				+1
 			</button>
 		</>
-	)
+	);
 }
