@@ -1,4 +1,5 @@
 import CounterApp from './components/01-usestate/CounterApp';
+import CounterWithCustomHook from './components/01-usestate/CounterWithCustomHook';
 
 function App() {
 	return (
@@ -7,6 +8,9 @@ function App() {
 			<br />
 			<hr />
 			<CounterApp />
+			<br />
+			<hr />
+			<CounterWithCustomHook />
 			<br />
 			<hr />
 		</>
