@@ -1,9 +1,13 @@
+import CounterApp from "./components/01-usestate/CounterApp";
 
 function App() {
 	return (
-		<div>
-			<h1>Hola mundo</h1>
-		</div>
+		<>
+			<h1>Uso de hooks ReactJs</h1>
+			<br /><hr />
+			<CounterApp />
+			<br /><hr />
+		</>
 	);
 }
 
