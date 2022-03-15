@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './counter.css';
+
+import CounterWithCustomHook from './CounterWithCustomHook';
 
 export default function CounterApp() {
 	const [counters, setCounter] = useState({
@@ -12,8 +13,8 @@ export default function CounterApp() {
 
 	return (
 		<>
-			<h1>Counter {counter1}</h1>
-			<h1>Counter {counter2}</h1>
+			<h3>Counter1 {counter1}</h3>
+			<h3>Counter2 {counter2}</h3>
 			<br />
 			<button
 				className="btn btn-primary"

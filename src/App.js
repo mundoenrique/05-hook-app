@@ -1,5 +1,6 @@
 import CounterApp from './components/01-usestate/CounterApp';
 import CounterWithCustomHook from './components/01-usestate/CounterWithCustomHook';
+import SimpleFrom from './components/02-useeffect/SimpleFrom';
 
 function App() {
 	return (
@@ -7,10 +8,16 @@ function App() {
 			<h1>Uso de hooks ReactJs</h1>
 			<br />
 			<hr />
+			<h2>useState</h2>
+			<br />
 			<CounterApp />
 			<br />
-			<hr />
 			<CounterWithCustomHook />
+			<br />
+			<hr />
+			<h2>useeffect</h2>
+			<br />
+			<SimpleFrom />
 			<br />
 			<hr />
 		</>

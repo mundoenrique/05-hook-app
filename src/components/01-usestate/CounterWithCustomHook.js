@@ -6,7 +6,7 @@ export default function CounterWithCustomHook() {
 	return (
 		<>
 			<h1>Counter with Hook {state}</h1>
-			<div class="btn-group" role="group" aria-label="Basic example">
+			<div className="btn-group" role="group" aria-label="Basic example">
 				<button className="btn btn-primary" onClick={() => increment(inc)}>
 					+{inc}
 				</button>
