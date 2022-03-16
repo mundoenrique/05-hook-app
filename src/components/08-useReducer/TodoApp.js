@@ -25,6 +25,13 @@ export default function TodoApp() {
 		dispatch(action);
 	};
 
+	const handleToggle = (todoId) => {
+		dispatch({
+			type: 'toggle',
+			payload: todoId,
+		});
+	};
+
 	const handleAddtodo = (e) => {
 		e.preventDefault();
 
@@ -54,7 +61,10 @@ export default function TodoApp() {
 					<ul className="list-group list-group-flush">
 						{todos.map((todo, index) => (
 							<li className="list-group-item" key={todo.id}>
-								<p className="p-todo text-center">
+								<p
+									className={`p-todo ${todo.done && 'complete'}`}
+									onClick={() => handleToggle(todo.id)}
+								>
 									{index + 1} {todo.desc}
 								</p>
 								<button
