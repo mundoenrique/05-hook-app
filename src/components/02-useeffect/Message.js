@@ -7,7 +7,7 @@ export default function Message() {
 	});
 
 	useEffect(() => {
-		console.log('componente montado');
+		// console.log('componente montado');
 		const mouseMove = (e) => {
 			const coors = { x: e.y, y: e.y };
 			console.log(coors);
@@ -20,7 +20,7 @@ export default function Message() {
 		window.addEventListener('mousemove', mouseMove);
 
 		return () => {
-			console.log('componente desmontado');
+			// console.log('componente desmontado');
 			window.removeEventListener('mousemove', mouseMove);
 		};
 	}, []);

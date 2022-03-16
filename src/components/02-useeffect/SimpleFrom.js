@@ -9,15 +9,15 @@ export default function SimpleFrom() {
 	const { name, email } = formState;
 
 	useEffect(() => {
-		console.log('First time component');
+		// console.log('First time component');
 	}, []);
 
 	useEffect(() => {
-		console.log('Change on form');
+		// console.log('Change on form');
 	}, [formState]);
 
 	useEffect(() => {
-		console.log('Change on email');
+		// console.log('Change on email');
 	}, [email]);
 
 	const handleInputChange = ({ target }) => {
