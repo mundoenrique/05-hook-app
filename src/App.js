@@ -5,6 +5,7 @@ import SimpleFrom from './components/02-useeffect/SimpleFrom';
 import MultipleCustomHooks from './components/03-examples/MultipleCustomHooks';
 import FocusScreen from './components/04-useRef/FocusScreen';
 import RealExpleRef from './components/04-useRef/RealExpleRef';
+import LayoutEffect from './components/05-LayoutEffect/LayoutEffect';
 
 function App() {
 	return (
@@ -35,6 +36,10 @@ function App() {
 			<FocusScreen />
 			<br />
 			<RealExpleRef />
+			<br />
+			<hr />
+			<h2>useLayoutEffect</h2>
+			<LayoutEffect />
 		</>
 	);
 }
