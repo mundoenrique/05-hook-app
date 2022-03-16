@@ -6,6 +6,7 @@ import MultipleCustomHooks from './components/03-examples/MultipleCustomHooks';
 import FocusScreen from './components/04-useRef/FocusScreen';
 import RealExpleRef from './components/04-useRef/RealExpleRef';
 import LayoutEffect from './components/05-LayoutEffect/LayoutEffect';
+import Memorize from './components/06-memos/Memorize';
 
 function App() {
 	return (
@@ -40,6 +41,10 @@ function App() {
 			<hr />
 			<h2>useLayoutEffect</h2>
 			<LayoutEffect />
+			<br />
+			<hr />
+			<h2>useMemo</h2>
+			<Memorize />
 		</>
 	);
 }
