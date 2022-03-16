@@ -1,5 +1,6 @@
 import CounterApp from './components/01-usestate/CounterApp';
 import CounterWithCustomHook from './components/01-usestate/CounterWithCustomHook';
+import FormWithCustomHook from './components/02-useeffect/FormWithCustomHook';
 import SimpleFrom from './components/02-useeffect/SimpleFrom';
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
 			<CounterWithCustomHook />
 			<br />
 			<hr />
-			<h2>useeffect</h2>
+			<h2>useEffect</h2>
 			<br />
 			<SimpleFrom />
+			<br />
+			<FormWithCustomHook />
 			<br />
 			<hr />
 		</>
