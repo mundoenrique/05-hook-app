@@ -9,6 +9,7 @@ import LayoutEffect from './components/05-LayoutEffect/LayoutEffect';
 import CallbackHook from './components/06-memos/CallbackHook';
 import Memorize from './components/06-memos/Memorize';
 import UseMemo from './components/06-memos/UseMemo';
+import { Padre } from './components/07-tarea-memo/Padre';
 
 function App() {
 	return (
@@ -51,6 +52,8 @@ function App() {
 			<UseMemo />
 			<br />
 			<CallbackHook />
+			<br />
+			<Padre />
 		</>
 	);
 }
