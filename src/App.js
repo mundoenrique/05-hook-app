@@ -10,6 +10,7 @@ import CallbackHook from './components/06-memos/CallbackHook';
 import Memorize from './components/06-memos/Memorize';
 import UseMemo from './components/06-memos/UseMemo';
 import { Padre } from './components/07-tarea-memo/Padre';
+import TodoApp from './components/08-useReducer/TodoApp';
 
 function App() {
 	return (
@@ -54,6 +55,10 @@ function App() {
 			<CallbackHook />
 			<br />
 			<Padre />
+			<br />
+			<hr />
+			<h2>UseReducer</h2>
+			<TodoApp />
 		</>
 	);
 }
