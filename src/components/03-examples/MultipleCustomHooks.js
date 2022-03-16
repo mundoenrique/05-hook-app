@@ -11,7 +11,6 @@ export default function MultipleCustomHooks() {
 	return (
 		<>
 			<h3>Custom hooks</h3>
-			<h4>Custom hooks</h4>
 			<br />
 			{loading ? (
 				<div className="alert alert-info text-center">loading...</div>

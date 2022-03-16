@@ -1,7 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function useFetch(url) {
+	const isMounted = useRef(true);
 	const [state, setState] = useState({});
+
+	useEffect(() => {
+		return () => {
+			isMounted.current = false;
+		};
+	}, []);
 
 	useEffect(() => {
 		setState({
@@ -12,11 +19,13 @@ export default function useFetch(url) {
 		fetch(url)
 			.then((resp) => resp.json())
 			.then((data) => {
-				setState({
-					loading: false,
-					error: null,
-					data,
-				});
+				if (isMounted) {
+					setState({
+						loading: false,
+						error: null,
+						data,
+					});
+				}
 			});
 	}, [url]);
 

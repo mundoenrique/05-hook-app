@@ -3,12 +3,13 @@ import CounterWithCustomHook from './components/01-usestate/CounterWithCustomHoo
 import FormWithCustomHook from './components/02-useeffect/FormWithCustomHook';
 import SimpleFrom from './components/02-useeffect/SimpleFrom';
 import MultipleCustomHooks from './components/03-examples/MultipleCustomHooks';
+import FocusScreen from './components/04-useRef/FocusScreen';
+import RealExpleRef from './components/04-useRef/RealExpleRef';
 
 function App() {
 	return (
 		<>
 			<h1>Uso de hooks ReactJs</h1>
-			<br />
 			<hr />
 			<h2>useState</h2>
 			<br />
@@ -27,6 +28,13 @@ function App() {
 			<h2>UseFetch</h2>
 			<br />
 			<MultipleCustomHooks />
+			<br />
+			<hr />
+			<h2>UseRef</h2>
+			<br />
+			<FocusScreen />
+			<br />
+			<RealExpleRef />
 		</>
 	);
 }
