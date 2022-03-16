@@ -6,6 +6,7 @@ import MultipleCustomHooks from './components/03-examples/MultipleCustomHooks';
 import FocusScreen from './components/04-useRef/FocusScreen';
 import RealExpleRef from './components/04-useRef/RealExpleRef';
 import LayoutEffect from './components/05-LayoutEffect/LayoutEffect';
+import CallbackHook from './components/06-memos/CallbackHook';
 import Memorize from './components/06-memos/Memorize';
 import UseMemo from './components/06-memos/UseMemo';
 
@@ -48,6 +49,8 @@ function App() {
 			<Memorize />
 			<br />
 			<UseMemo />
+			<br />
+			<CallbackHook />
 		</>
 	);
 }
