@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react';
 import { todoReducer } from './todoReducer';
-import useForm from '../../hooks/useForm';
+import TodoList from './TodoList';
+import TodoAdd from './TodoAdd';
 
 const initReducer = () => {
 	return JSON.parse(localStorage.getItem('todos')) || [];
@@ -8,9 +9,6 @@ const initReducer = () => {
 
 export default function TodoApp() {
 	const [todos, dispatch] = useReducer(todoReducer, [], initReducer);
-	const [{ description }, resetForm, handleInputChange] = useForm({
-		description: '',
-	});
 
 	useEffect(() => {
 		localStorage.setItem('todos', JSON.stringify(todos));
@@ -32,25 +30,11 @@ export default function TodoApp() {
 		});
 	};
 
-	const handleAddtodo = (e) => {
-		e.preventDefault();
-
-		if (description.trim().length <= 1) {
-			return;
-		}
-
-		const newTodo = {
-			id: new Date().getTime(),
-			desc: description,
-			done: false,
-		};
-		const action = {
+	const handleAddTodo = (newTodo) => {
+		dispatch({
 			type: 'add',
 			payload: newTodo,
-		};
-
-		dispatch(action);
-		resetForm();
+		});
 	};
 
 	return (
@@ -58,48 +42,14 @@ export default function TodoApp() {
 			<h3>TodoApp ({todos.length})</h3>
 			<div className="row">
 				<div className="col-7">
-					<ul className="list-group list-group-flush">
-						{todos.map((todo, index) => (
-							<li className="list-group-item" key={todo.id}>
-								<p
-									className={`p-todo ${todo.done && 'complete'}`}
-									onClick={() => handleToggle(todo.id)}
-								>
-									{index + 1} {todo.desc}
-								</p>
-								<button
-									className="btn btn-danger"
-									onClick={() => handleDelete(todo.id)}
-								>
-									Eliminar
-								</button>
-							</li>
-						))}
-					</ul>
+					<TodoList
+						todos={todos}
+						handleDelete={handleDelete}
+						handleToggle={handleToggle}
+					/>
 				</div>
 				<div className="col-5">
-					<h4>agregar TODO</h4>
-					<form onSubmit={handleAddtodo}>
-						<div className="mb-3">
-							<label htmlFor="description" className="form-label">
-								descripción de la tarea
-							</label>
-							<input
-								type="text"
-								className="form-control"
-								name="description"
-								id="description"
-								autoComplete="off"
-								value={description}
-								onChange={handleInputChange}
-							/>
-						</div>
-						<div className="d-grid gap-2">
-							<button type="submit" className="btn btn-primary">
-								Submit
-							</button>
-						</div>
-					</form>
+					<TodoAdd handleAddTodo={handleAddTodo} />
 				</div>
 			</div>
 		</>
