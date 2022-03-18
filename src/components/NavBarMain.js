@@ -1,9 +1,7 @@
-import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { TenantContext } from '../App';
 
 export default function NavBarMain() {
-	const { tenant } = useContext(TenantContext);
+	const tenant = 'novo';
 
 	return (
 		<>
