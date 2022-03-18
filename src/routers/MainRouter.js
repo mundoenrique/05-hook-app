@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import ValidTenant from '../auth/ValidTenant';
+import App from '../App';
 import CounterApp from '../components/01-usestate/CounterApp';
 import CounterWithCustomHook from '../components/01-usestate/CounterWithCustomHook';
 import UseState from '../components/01-usestate/UseState';
@@ -32,7 +32,7 @@ export default function MainRouter() {
 			<NavBarMain />
 			<div className="container">
 				<Routes>
-					<Route path="/:tenant" element={<ValidTenant />}>
+					<Route path="/:urlTenant" element={<App />}>
 						<Route path="use-state" element={<UseState />}>
 							<Route path="counter" element={<CounterApp />} />
 							<Route path="counter-hook" element={<CounterWithCustomHook />} />
