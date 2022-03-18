@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Message from './Message';
 
-export default function SimpleFrom() {
+export default function SimpleForm() {
 	const [formState, setFormState] = useState({
 		name: '',
 		email: '',

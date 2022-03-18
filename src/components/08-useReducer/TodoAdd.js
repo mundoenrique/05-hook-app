@@ -2,7 +2,7 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 
 export default function TodoAdd({ handleAddTodo }) {
-	const [{ description }, resetForm, handleInputChange] = useForm({
+	const [{ description }, handleInputChange, resetForm] = useForm({
 		description: '',
 	});
 

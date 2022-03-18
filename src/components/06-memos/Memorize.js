@@ -18,7 +18,7 @@ export default function Memorize() {
 					+1
 				</button>
 				<button className="btn btn-outline-info" onClick={() => setShow(!show)}>
-					mostrar/ocultar {JSON.stringify(show)}
+					Otra acción ({JSON.stringify(show)})
 				</button>
 			</div>
 		</>
