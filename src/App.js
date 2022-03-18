@@ -1,5 +1,6 @@
-import { Outlet, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { TenantContext, tenantFeatures } from './helpers/toolHelpers';
+import MainRouter from './routers/MainRouter';
 
 function App() {
 	const { urlTenant } = useParams();
@@ -9,7 +10,7 @@ function App() {
 		<>
 			{configTenant ? (
 				<TenantContext.Provider value={configTenant}>
-					<Outlet />
+					<MainRouter />
 				</TenantContext.Provider>
 			) : (
 				<h1>No found</h1>

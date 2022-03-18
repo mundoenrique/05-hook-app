@@ -1,7 +1,5 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import App from '../App';
 import CounterApp from '../components/01-usestate/CounterApp';
 import CounterWithCustomHook from '../components/01-usestate/CounterWithCustomHook';
 import UseState from '../components/01-usestate/UseState';
@@ -32,38 +30,35 @@ export default function MainRouter() {
 			<NavBarMain />
 			<div className="container">
 				<Routes>
-					<Route path="/:urlTenant" element={<App />}>
-						<Route path="use-state" element={<UseState />}>
-							<Route path="counter" element={<CounterApp />} />
-							<Route path="counter-hook" element={<CounterWithCustomHook />} />
-						</Route>
-						<Route path="use-effect" element={<UseEffect />}>
-							<Route path="simple-form" element={<SimpleForm />} />
-							<Route path="hook-form" element={<FormWithCustomHook />} />
-						</Route>
-						<Route path="examples" element={<Examples />}>
-							<Route path="hooks-multiple" element={<MultipleCustomHooks />} />
-						</Route>
-						<Route path="use-ref" element={<UseRef />}>
-							<Route path="focus-screen" element={<FocusScreen />} />
-							<Route path="example-ref" element={<RealExpleRef />} />
-						</Route>
-						<Route path="use-layout-effect" element={<UseLayoutEffect />}>
-							<Route path="example-layout" element={<LayoutEffect />} />
-						</Route>
-						<Route path="use-memo" element={<UseMemos />}>
-							<Route path="memorize" element={<Memorize />} />
-							<Route path="memo-hook" element={<UseMemo />} />
-							<Route path="callback-hook" element={<CallbackHook />} />
-							<Route path="example-memo" element={<Padre />} />
-						</Route>
-						<Route path="use-reducer" element={<UseReducer />}>
-							<Route path="example-reducer" element={<TodoApp />} />
-						</Route>
-						<Route path="use-context" element={<UseContex />}>
-							<Route path="example-contex/*" element={<MainApp />} />
-						</Route>
-						<Route path="*" element={<h1>No found</h1>} />
+					<Route path="use-state" element={<UseState />}>
+						<Route path="counter" element={<CounterApp />} />
+						<Route path="counter-hook" element={<CounterWithCustomHook />} />
+					</Route>
+					<Route path="use-effect" element={<UseEffect />}>
+						<Route path="simple-form" element={<SimpleForm />} />
+						<Route path="hook-form" element={<FormWithCustomHook />} />
+					</Route>
+					<Route path="examples" element={<Examples />}>
+						<Route path="hooks-multiple" element={<MultipleCustomHooks />} />
+					</Route>
+					<Route path="use-ref" element={<UseRef />}>
+						<Route path="focus-screen" element={<FocusScreen />} />
+						<Route path="example-ref" element={<RealExpleRef />} />
+					</Route>
+					<Route path="use-layout-effect" element={<UseLayoutEffect />}>
+						<Route path="example-layout" element={<LayoutEffect />} />
+					</Route>
+					<Route path="use-memo" element={<UseMemos />}>
+						<Route path="memorize" element={<Memorize />} />
+						<Route path="memo-hook" element={<UseMemo />} />
+						<Route path="callback-hook" element={<CallbackHook />} />
+						<Route path="example-memo" element={<Padre />} />
+					</Route>
+					<Route path="use-reducer" element={<UseReducer />}>
+						<Route path="example-reducer" element={<TodoApp />} />
+					</Route>
+					<Route path="use-context" element={<UseContex />}>
+						<Route path="example-contex/*" element={<MainApp />} />
 					</Route>
 					<Route path="*" element={<h1>No found</h1>} />
 				</Routes>

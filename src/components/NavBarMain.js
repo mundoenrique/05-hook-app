@@ -1,13 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 
 export default function NavBarMain() {
-	const tenant = 'novo';
-
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 				<div className="container-fluid">
-					<NavLink to={`/${tenant}`} className="navbar-brand">
+					<NavLink to={``} className="navbar-brand">
 						React Hooks
 					</NavLink>
 					<button
@@ -35,16 +33,13 @@ export default function NavBarMain() {
 								</NavLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
-											to={`${tenant}/use-state/counter`}
-											className="dropdown-item"
-										>
+										<Link to={`use-state/counter`} className="dropdown-item">
 											Counter
 										</Link>
 									</li>
 									<li>
 										<Link
-											to={`${tenant}/use-state/counter-hook`}
+											to={`use-state/counter-hook`}
 											className="dropdown-item"
 										>
 											Counter Hook
@@ -65,17 +60,14 @@ export default function NavBarMain() {
 								<ul className="dropdown-menu">
 									<li>
 										<Link
-											to={`${tenant}/use-effect/simple-form`}
+											to={`use-effect/simple-form`}
 											className="dropdown-item"
 										>
 											Simple form
 										</Link>
 									</li>
 									<li>
-										<Link
-											to={`${tenant}/use-effect/hook-form`}
-											className="dropdown-item"
-										>
+										<Link to={`use-effect/hook-form`} className="dropdown-item">
 											Hook form
 										</Link>
 									</li>
@@ -94,7 +86,7 @@ export default function NavBarMain() {
 								<ul className="dropdown-menu">
 									<li>
 										<Link
-											to={`${tenant}/examples/hooks-multiple`}
+											to={`examples/hooks-multiple`}
 											className="dropdown-item"
 										>
 											Hooks multiple
@@ -114,18 +106,12 @@ export default function NavBarMain() {
 								</NavLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
-											to={`${tenant}/use-ref/focus-screen`}
-											className="dropdown-item"
-										>
+										<Link to={`use-ref/focus-screen`} className="dropdown-item">
 											Focus screen
 										</Link>
 									</li>
 									<li>
-										<Link
-											to={`${tenant}/use-ref/example-ref`}
-											className="dropdown-item"
-										>
+										<Link to={`use-ref/example-ref`} className="dropdown-item">
 											Example Ref
 										</Link>
 									</li>
@@ -144,7 +130,7 @@ export default function NavBarMain() {
 								<ul className="dropdown-menu">
 									<li>
 										<Link
-											to={`${tenant}/use-layout-effect/example-layout`}
+											to={`use-layout-effect/example-layout`}
 											className="dropdown-item"
 										>
 											Example layout
@@ -164,24 +150,18 @@ export default function NavBarMain() {
 								</NavLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
-											to={`${tenant}/use-memo/memorize`}
-											className="dropdown-item"
-										>
+										<Link to={`use-memo/memorize`} className="dropdown-item">
 											Memorize
 										</Link>
 									</li>
 									<li>
-										<Link
-											to={`${tenant}/use-memo/memo-hook`}
-											className="dropdown-item"
-										>
+										<Link to={`use-memo/memo-hook`} className="dropdown-item">
 											Memo hook
 										</Link>
 									</li>
 									<li>
 										<Link
-											to={`${tenant}/use-memo/callback-hook`}
+											to={`use-memo/callback-hook`}
 											className="dropdown-item"
 										>
 											Callbak hook
@@ -189,7 +169,7 @@ export default function NavBarMain() {
 									</li>
 									<li>
 										<Link
-											to={`${tenant}/use-memo/example-memo`}
+											to={`use-memo/example-memo`}
 											className="dropdown-item"
 										>
 											Example memo
@@ -210,7 +190,7 @@ export default function NavBarMain() {
 								<ul className="dropdown-menu">
 									<li>
 										<Link
-											to={`${tenant}/use-reducer/example-reducer`}
+											to={`use-reducer/example-reducer`}
 											className="dropdown-item"
 										>
 											Example reducer
@@ -231,7 +211,7 @@ export default function NavBarMain() {
 								<ul className="dropdown-menu">
 									<li>
 										<Link
-											to={`${tenant}/use-context/example-contex`}
+											to={`use-context/example-contex`}
 											className="dropdown-item"
 										>
 											example contex
