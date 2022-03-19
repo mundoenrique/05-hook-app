@@ -1,13 +1,14 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { NavBarLink } from '../helpers/toolHelpers';
 
 export default function NavBarMain() {
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 				<div className="container-fluid">
-					<NavLink to={``} className="navbar-brand">
+					<Link to="" className="navbar-brand">
 						React Hooks
-					</NavLink>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -22,200 +23,218 @@ export default function NavBarMain() {
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav">
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-state"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseState
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link to={`use-state/counter`} className="dropdown-item">
+										<NavBarLink
+											to={`use-state/counter`}
+											className="dropdown-item"
+										>
 											Counter
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-state/counter-hook`}
 											className="dropdown-item"
 										>
 											Counter Hook
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-effect"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseEffect
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-effect/simple-form`}
 											className="dropdown-item"
 										>
 											Simple form
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link to={`use-effect/hook-form`} className="dropdown-item">
+										<NavBarLink
+											to={`use-effect/hook-form`}
+											className="dropdown-item"
+										>
 											Hook form
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="examples"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									Examples
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
+										<NavBarLink
 											to={`examples/hooks-multiple`}
 											className="dropdown-item"
 										>
 											Hooks multiple
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-ref"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseRef
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link to={`use-ref/focus-screen`} className="dropdown-item">
+										<NavBarLink
+											to={`use-ref/focus-screen`}
+											className="dropdown-item"
+										>
 											Focus screen
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link to={`use-ref/example-ref`} className="dropdown-item">
+										<NavBarLink
+											to={`use-ref/example-ref`}
+											className="dropdown-item"
+										>
 											Example Ref
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-layout-effect"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseLayoutEffect
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-layout-effect/example-layout`}
 											className="dropdown-item"
 										>
 											Example layout
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-memo"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseMemo
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link to={`use-memo/memorize`} className="dropdown-item">
+										<NavBarLink
+											to={`use-memo/memorize`}
+											className="dropdown-item"
+										>
 											Memorize
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link to={`use-memo/memo-hook`} className="dropdown-item">
+										<NavBarLink
+											to={`use-memo/memo-hook`}
+											className="dropdown-item"
+										>
 											Memo hook
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-memo/callback-hook`}
 											className="dropdown-item"
 										>
 											Callbak hook
-										</Link>
+										</NavBarLink>
 									</li>
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-memo/example-memo`}
 											className="dropdown-item"
 										>
 											Example memo
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-reducer"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseReducer
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-reducer/example-reducer`}
 											className="dropdown-item"
 										>
 											Example reducer
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item dropdown">
-								<NavLink
-									to="#"
-									className="nav-link dropdown-toggle active"
+								<NavBarLink
+									to="use-context"
+									className="nav-link dropdown-toggle"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									UseContex
-								</NavLink>
+								</NavBarLink>
 								<ul className="dropdown-menu">
 									<li>
-										<Link
+										<NavBarLink
 											to={`use-context/example-contex`}
 											className="dropdown-item"
 										>
 											example contex
-										</Link>
+										</NavBarLink>
 									</li>
 								</ul>
 							</li>
