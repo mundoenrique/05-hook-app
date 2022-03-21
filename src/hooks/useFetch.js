@@ -26,6 +26,13 @@ export default function useFetch(url) {
 						data,
 					});
 				}
+			})
+			.catch(() => {
+				setState({
+					loading: false,
+					error: 'No fue posible obtener información',
+					data: null,
+				});
 			});
 	}, [url]);
 
