@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function useFetch(url) {
 	const isMounted = useRef(true);
-	const [state, setState] = useState({});
+	const [state, setState] = useState({
+		loading: true,
+		error: null,
+		data: null,
+	});
 
 	useEffect(() => {
 		return () => {
