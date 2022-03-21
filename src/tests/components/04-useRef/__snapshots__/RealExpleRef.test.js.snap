@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas sobre el componente <RealExpleRef /> Debe renderizar correctamente el componente <RealExpleRef /> 1`] = `
+<Fragment>
+  <h3>
+    RealExpleRef
+  </h3>
+  <button
+    className="btn btn-info"
+    onClick={[Function]}
+  >
+    Mostrar/Ocultar
+  </button>
+</Fragment>
+`;
