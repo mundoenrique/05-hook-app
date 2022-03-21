@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba en componente <App /> Debe mostrarse correctamente el componene <App /> 1`] = `
+<Fragment>
+  <h1>
+    No found
+  </h1>
+</Fragment>
+`;
