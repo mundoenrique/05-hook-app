@@ -1,4 +1,5 @@
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
 import AppRouter from '../../../components/09-UseContex/AppRouter';
 import { UserContext } from '../../../components/09-UseContex/UserContext';
 
@@ -9,9 +10,11 @@ describe('Pruebas sobre <AppRouter />', () => {
 		email: 'mundoenrique@gmail.com',
 	};
 
-	const wrapper = shallow(
+	const wrapper = mount(
 		<UserContext.Provider value={{ user }}>
-			<AppRouter />
+			<BrowserRouter>
+				<AppRouter />
+			</BrowserRouter>
 		</UserContext.Provider>
 	);
 
