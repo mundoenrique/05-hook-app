@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas sobre <HomeScreen /> Debe renderizar <HomeScreen /> 1`] = `
+Array [
+  <h3>
+    HomeScreen
+  </h3>,
+  <pre>
+    {
+  "name": "Enrique",
+  "email": "mundoenrique@gmail.com"
+}
+  </pre>,
+]
+`;
