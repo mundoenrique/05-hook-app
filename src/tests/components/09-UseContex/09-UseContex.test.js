@@ -1,6 +1,6 @@
 import { mount } from 'enzyme';
-import HomeScreen from '../../components/09-UseContex/HomeScreen';
-import { UserContext } from '../../components/09-UseContex/UserContext';
+import HomeScreen from '../../../components/09-UseContex/HomeScreen';
+import { UserContext } from '../../../components/09-UseContex/UserContext';
 
 describe('Pruebas sobre <HomeScreen />', () => {
 	const user = {
